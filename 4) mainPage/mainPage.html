@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Dashboard</title>
+    <link rel="stylesheet" href="mainPage.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Expense Tracker</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="/1) landingPage/landingPage.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <h2>Welcome to your personal expense tracker</h2>
+
+        <div class="summary">
+            <h3>Your Finances Overview</h3>
+            <div class="entries-section">
+                <h3>Your Recent Entries</h3>
+                <div class="entry-container" id="expense-entries">
+                    <h4>Expense Entries</h4>
+                    <!-- Expense entries will appear here -->
+                </div>
+                <div class="entry-container" id="income-entries">
+                    <h4>Income Entries</h4>
+                    <!-- Income entries will appear here -->
+                </div>
+            </div>
+
+            <div class="summary-section">
+                <div class="summary-card" id="total-expense-container">
+                    <h3>Total Expense</h3>
+                    <span id="total-expense">$0.00</span>
+                </div>
+                <div class="summary-card" id="total-income-container">
+                    <h3>Total Income</h3>
+                    <span id="total-income">$0.00</span>
+                </div>
+            </div>
+
+
+
+
+            <div class="button-container">
+                <button id="add-expense-btn" class="add-btn">Add Expense</button>
+                <button id="add-income-btn" class="add-btn">Add Income</button>
+            </div>
+            
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Expense Tracker | Helping you stay on top of your finances.</p>
+    </footer>
+
+    <!-- Popup for adding expense -->
+    <div class="popup" id="expense-popup">
+        <div class="popup-content">
+            <span class="close" id="close-expense">&times;</span>
+            <h3>Select Expense Category</h3>
+            <ul class="categories" id="expense-categories">
+                <li data-category="Shopping">Shopping</li>
+                <li data-category="Eating Out">Eating Out</li>
+                <li data-category="Entertainment">Entertainment</li>
+                <li data-category="Travel">Travel</li>
+                <li data-category="Utilities">Utilities</li>
+            </ul>
+            <div id="expense-input-section" class="input-section" style="display: none;">
+                <h4 id="selected-expense-category"></h4>
+                <input type="text" id="expense-description" placeholder="Write the expense" />
+                <input type="number" id="expense-amount" placeholder="Enter amount" />
+                <button id="submit-expense">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for adding income -->
+    <div class="popup" id="income-popup">
+        <div class="popup-content">
+            <span class="close" id="close-income">&times;</span>
+            <h3>Select Income Category</h3>
+            <ul class="categories" id="income-categories">
+                <li data-category="Salary">Salary</li>
+                <li data-category="Freelancing">Freelancing</li>
+                <li data-category="Daily Wage">Daily Wage</li>
+                <li data-category="Investments">Investments</li>
+                <li data-category="Others">Others</li>
+            </ul>
+            <div id="income-input-section" class="input-section" style="display: none;">
+                <h4 id="selected-income-category"></h4>
+                <input type="text" id="income-description" placeholder="Write the income source" />
+                <input type="number" id="income-amount" placeholder="Enter amount" />
+                <button id="submit-income">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="mainPage.js"></script>
+</body>
+
+</html>
